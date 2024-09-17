@@ -1,0 +1,26 @@
+{{> layout}}
+<h1>Users</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#users}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{username}}</td>
+            <td>
+                <a href="/edit/{{id}}">Edit</a>
+                <form action="/delete/{{id}}" method="post" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {{/users}}
+    </tbody>
+</table>
+<a href="/register">Register new user</a>

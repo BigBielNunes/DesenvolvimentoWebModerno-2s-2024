@@ -1,0 +1,10 @@
+{{> layout}}
+<h1>Edit User</h1>
+<form action="/edit/{{user.id}}" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" value="{{user.username}}" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <button type="submit">Update</button>
+</form>
+<a href="/users">Back to Users</a>
